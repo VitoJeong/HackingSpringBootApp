@@ -17,10 +17,12 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!-- 타임리프 템플릿 엔진-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <!-- 스프링 웹플럭스 리액티브 웹 스택-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
