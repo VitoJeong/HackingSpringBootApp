@@ -1,4 +1,4 @@
-package com.greglturnquist.reactive;
+package com.greglturnquist.ch1reactive;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

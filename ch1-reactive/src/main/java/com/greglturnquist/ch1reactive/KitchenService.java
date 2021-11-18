@@ -1,4 +1,4 @@
-package com.greglturnquist.reactive;
+package com.greglturnquist.ch1reactive;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

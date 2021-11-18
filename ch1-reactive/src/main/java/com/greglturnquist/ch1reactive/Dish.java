@@ -1,4 +1,4 @@
-package com.greglturnquist.reactive;
+package com.greglturnquist.ch1reactive;
 
 public class Dish {
 
