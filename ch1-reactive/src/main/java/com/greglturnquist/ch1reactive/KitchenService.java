@@ -18,6 +18,7 @@ public class KitchenService {
      * 250ms 간격으로 계속 요리를 제공한다.
      *
      * generate(): 동기 방식으로 한 번에 1개의 데이터를 생성할 때 사용하는 함수
+     *
      *              Subscriber로부터 요청이 왔을 때 신호를 생성
      *
      * SynchronousSink: Flux의 핸들, 원소를 동적으로 발행

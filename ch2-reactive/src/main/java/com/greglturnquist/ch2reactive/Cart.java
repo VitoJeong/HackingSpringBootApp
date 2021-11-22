@@ -32,4 +32,8 @@ public class Cart {
         this.id = id;
         this.cartItems = cartItems;
     }
+
+    boolean found = false;
+
+
 }
