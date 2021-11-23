@@ -5,12 +5,11 @@
 
 
     <groupId>com.greglturnquist</groupId>
-    <artifactId>hacking-spring-boot</artifactId>
+    <artifactId>hacking-spring-boot-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>HackingSpringBootApp</name>
     <packaging>pom</packaging>
 
-    <inceptionYear>2019</inceptionYear>
 
     <licenses>
         <license>
@@ -38,5 +37,6 @@
     <modules>
         <module>ch1-reactive</module>
         <module>ch2-reactive</module>
+        <module>ch3-reactive</module>
     </modules>
 </project>
