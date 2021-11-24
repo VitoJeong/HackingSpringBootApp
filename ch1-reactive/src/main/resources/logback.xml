@@ -11,7 +11,7 @@
     <logger name="reactor" level="trace" />
     <logger name="io.reactor" level="trace" />
 
-    <root level="error">
+    <root level="INFO">
         <appender-ref ref="console" />
     </root>
 
