@@ -1,7 +1,6 @@
 package com.greglturnquist.reactive;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
@@ -10,10 +9,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-@Primary
 @Slf4j
 @Service
-public class KitchenService implements Kitchen{
+public class KitchenServiceSec implements Kitchen{
 
     /**
      * 요리 스트림 생성

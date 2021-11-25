@@ -10,7 +10,7 @@ import reactor.core.publisher.Flux;
 @RequiredArgsConstructor
 public class ServerController {
 
-    private final KitchenService kitchen;
+    private final Kitchen kitchen;
 
 
     /**
