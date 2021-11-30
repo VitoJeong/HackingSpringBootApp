@@ -6,7 +6,9 @@ import com.greglturnquist.reactive.service.CartService;
 import com.greglturnquist.reactive.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.reactive.result.view.Rendering;
@@ -16,33 +18,39 @@ import reactor.core.publisher.Mono;
 @Controller
 public class HomeController {
 
-    private final ItemRepository itemRepository;
-    private final CartRepository cartRepository;
-    private final CartService cartService;
     private final InventoryService inventoryService;
 
-    private String myCart = "My Cart";
-
-    /**
-     * Mono Redering: View와 Attribute를 포함하는 웹플럭스 컨테이너
-     *
-     * @return
-     */
     @GetMapping
-    Mono<Rendering> home() {
-        return Mono.just(Rendering.view("home.html")
-                .modelAttribute("items",
-                        itemRepository.findAll().doOnNext(item -> home().log()))
-                .modelAttribute("cart",
-                        cartRepository.findById(myCart)
-                                .defaultIfEmpty(new Cart(myCart)))
+    Mono<Rendering> home() { // <1>
+        return Mono.just(Rendering.view("home.html") // <2>
+                .modelAttribute("items", this.inventoryService.getInventory()) // <3>
+                .modelAttribute("cart", this.inventoryService.getCart("My Cart") // <4>
+                        .defaultIfEmpty(new Cart("My Cart")))
                 .build());
     }
-
+    // end::2[]
 
     @PostMapping("/add/{id}")
     Mono<String> addToCart(@PathVariable String id) {
-        return inventoryService.addItemToCart(myCart, id)
+        return inventoryService.addItemToCart("My Cart", id)
+                .thenReturn("redirect:/");
+    }
+
+    @DeleteMapping("/remove/{id}")
+    Mono<String> removeFromCart(@PathVariable String id) {
+        return inventoryService.removeOneFromCart("My Cart", id)
+                .thenReturn("redirect:/");
+    }
+
+    @PostMapping
+    Mono<String> createItem(@ModelAttribute Item newItem) {
+        return inventoryService.saveItem(newItem) //
+                .thenReturn("redirect:/");
+    }
+
+    @DeleteMapping("/delete/{id}")
+    Mono<String> deleteItem(@PathVariable String id) {
+        return inventoryService.deleteItem(id) //
                 .thenReturn("redirect:/");
     }
 
