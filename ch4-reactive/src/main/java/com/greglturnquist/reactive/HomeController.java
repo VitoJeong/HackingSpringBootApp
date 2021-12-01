@@ -21,14 +21,14 @@ public class HomeController {
     private final InventoryService inventoryService;
 
     @GetMapping
-    Mono<Rendering> home() { // <1>
-        return Mono.just(Rendering.view("home.html") // <2>
-                .modelAttribute("items", this.inventoryService.getInventory()) // <3>
-                .modelAttribute("cart", this.inventoryService.getCart("My Cart") // <4>
+    Mono<Rendering> home() {
+        return Mono.just(Rendering.view("home.html")
+                .modelAttribute("items", this.inventoryService.getInventory())
+                .modelAttribute("cart", this.inventoryService.getCart("My Cart")
                         .defaultIfEmpty(new Cart("My Cart")))
                 .build());
     }
-    // end::2[]
+
 
     @PostMapping("/add/{id}")
     Mono<String> addToCart(@PathVariable String id) {

@@ -9,7 +9,7 @@ import reactor.test.StepVerifier;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-// 스프링데이터 몽고 DB를 화용에 초점 둔 몽고 DB 테스트 관련기능 활성화
+// 스프링데이터 몽고 DB 테스트 관련기능 활성화 - @ExtendWith({SpringExtension.class}) 가 포함
 @DataMongoTest
 public class MongoDBSliceTest {
 

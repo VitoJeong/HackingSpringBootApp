@@ -15,12 +15,16 @@ import reactor.core.publisher.Mono;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
+/**
+ * HomeController에 국한된 스프링 웹플럭스 슬라이스 테스트
+ */
 @WebFluxTest(HomeController.class)
 public class HomeControllerSliceTest {
 
     @Autowired
     private WebTestClient client;
 
+    // 가짜 객체를 이용해서 테스트 대상에 집중할 수 있게만듬
     @MockBean
     InventoryService inventoryService;
 
