@@ -23,8 +23,8 @@ public class HomeController {
     @GetMapping
     Mono<Rendering> home() {
         return Mono.just(Rendering.view("home.html")
-                .modelAttribute("items", this.inventoryService.getInventory())
-                .modelAttribute("cart", this.inventoryService.getCart("My Cart")
+                .modelAttribute("items", inventoryService.getInventory())
+                .modelAttribute("cart", inventoryService.getCart("My Cart")
                         .defaultIfEmpty(new Cart("My Cart")))
                 .build());
     }

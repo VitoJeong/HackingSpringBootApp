@@ -67,12 +67,13 @@
             <artifactId>blockhound</artifactId>
             <version>1.0.6.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>io.projectreactor.tools</groupId>
-            <artifactId>blockhound-junit-platform</artifactId>
-            <version>1.0.6.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
+        <!-- 테스트 메소드에 사용된 블로킹 코드 호출을 검사할 수 있게 된다. -->
+<!--        <dependency>-->
+<!--            <groupId>io.projectreactor.tools</groupId>-->
+<!--            <artifactId>blockhound-junit-platform</artifactId>-->
+<!--            <version>1.0.6.RELEASE</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

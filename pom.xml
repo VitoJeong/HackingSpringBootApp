@@ -44,5 +44,6 @@
         <module>ch1-reactive</module>
         <module>ch2-reactive</module>
         <module>ch3-reactive</module>
+        <module>ch4-reactive</module>
     </modules>
 </project>

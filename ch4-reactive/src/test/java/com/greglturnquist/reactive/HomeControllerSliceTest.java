@@ -4,6 +4,7 @@ import com.greglturnquist.reactive.repository.CartRepository;
 import com.greglturnquist.reactive.repository.ItemRepository;
 import com.greglturnquist.reactive.service.CartService;
 import com.greglturnquist.reactive.service.InventoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
@@ -19,6 +20,7 @@ import static org.mockito.Mockito.when;
  * HomeController에 국한된 스프링 웹플럭스 슬라이스 테스트
  */
 @WebFluxTest(HomeController.class)
+@Slf4j
 public class HomeControllerSliceTest {
 
     @Autowired
@@ -41,8 +43,11 @@ public class HomeControllerSliceTest {
                 .expectStatus().isOk()
                 .expectBody(String.class)
                 .consumeWith(exchangeResult -> {
+                    log.info("========== Assertions =========");
+                    log.info(exchangeResult.getResponseBody());
                     assertThat(exchangeResult.getResponseBody()).contains("\"/add/id1\"");
                     assertThat(exchangeResult.getResponseBody()).contains("\"/add/id2\"");
                 });
+
     }
 }
