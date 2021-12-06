@@ -74,6 +74,12 @@
         <!--            <version>1.0.6.RELEASE</version>-->
         <!--            <scope>test</scope>-->
         <!--        </dependency>-->
+        <!-- 애플리케이션 모니터링을 도와주는 모듈 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -90,6 +96,7 @@
                     </excludes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
