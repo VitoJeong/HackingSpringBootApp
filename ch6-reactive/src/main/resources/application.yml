@@ -22,4 +22,11 @@ info:
     data:
       version: @spring-data-bom.version@
 
-
+logging:
+  level:
+    root: DEBUG
+    org:
+      springframework:
+        data:
+          document:
+            mongodb: DEBUG
