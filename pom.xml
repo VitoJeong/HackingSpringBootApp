@@ -67,5 +67,6 @@
         <module>ch4-reactive</module>
         <module>ch5-reactive</module>
         <module>ch6-reactive</module>
+        <module>ch7-reactive</module>
     </modules>
 </project>
