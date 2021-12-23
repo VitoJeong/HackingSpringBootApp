@@ -36,7 +36,7 @@ public class Item {
     }
 
     public Item(String name, String description, double price) {
-        this(null, name, null, price);
+        this(null, name, description, price);
     }
 
     public Item(String id, String name, String description, double price) {

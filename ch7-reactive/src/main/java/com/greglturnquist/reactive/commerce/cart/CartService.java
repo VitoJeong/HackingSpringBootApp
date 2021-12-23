@@ -1,9 +1,6 @@
-package com.greglturnquist.reactive.service;
+package com.greglturnquist.reactive.commerce.cart;
 
-import com.greglturnquist.reactive.Cart;
-import com.greglturnquist.reactive.CartItem;
-import com.greglturnquist.reactive.repository.CartRepository;
-import com.greglturnquist.reactive.repository.ItemRepository;
+import com.greglturnquist.reactive.commerce.item.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

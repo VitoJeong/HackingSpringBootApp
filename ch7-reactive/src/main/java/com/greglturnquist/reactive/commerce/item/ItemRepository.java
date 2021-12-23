@@ -1,6 +1,5 @@
-package com.greglturnquist.reactive.repository;
+package com.greglturnquist.reactive.commerce.item;
 
-import com.greglturnquist.reactive.Item;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;

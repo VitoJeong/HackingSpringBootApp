@@ -12,4 +12,13 @@ management:
       exposure:
         include: "*"
 
-
+logging:
+  level:
+    org:
+      springframework:
+        amqp: DEBUG
+        messaging: DEBUG
+        data: DEBUG
+    com:
+      greglturnquist: DEBUG
+    reactor: DEBUG

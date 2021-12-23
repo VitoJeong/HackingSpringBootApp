@@ -1,7 +1,7 @@
 package com.greglturnquist.reactive;
 
-import com.greglturnquist.reactive.repository.ItemRepository;
-import org.assertj.core.api.Assertions;
+import com.greglturnquist.reactive.commerce.item.Item;
+import com.greglturnquist.reactive.commerce.item.ItemRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

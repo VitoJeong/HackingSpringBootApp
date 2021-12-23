@@ -1,6 +1,5 @@
-package com.greglturnquist.reactive.repository;
+package com.greglturnquist.reactive.commerce.cart;
 
-import com.greglturnquist.reactive.Cart;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 
 /**

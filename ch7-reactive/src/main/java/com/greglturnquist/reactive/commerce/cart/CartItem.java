@@ -1,5 +1,6 @@
-package com.greglturnquist.reactive;
+package com.greglturnquist.reactive.commerce.cart;
 
+import com.greglturnquist.reactive.commerce.item.Item;
 import lombok.Data;
 
 /**

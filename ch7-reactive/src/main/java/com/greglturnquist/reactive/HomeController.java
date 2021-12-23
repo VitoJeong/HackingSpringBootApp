@@ -1,6 +1,8 @@
 package com.greglturnquist.reactive;
 
-import com.greglturnquist.reactive.service.InventoryService;
+import com.greglturnquist.reactive.commerce.InventoryService;
+import com.greglturnquist.reactive.commerce.cart.Cart;
+import com.greglturnquist.reactive.commerce.item.Item;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
