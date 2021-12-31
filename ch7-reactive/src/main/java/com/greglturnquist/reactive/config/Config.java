@@ -9,6 +9,7 @@ public class Config {
 
     /**
      * POJO 객체를 Json 문자열로 변환하고 문자열을 바이트 배열로 변환해주는 라이브러리
+     * 자바 객체를 AMQP 네트워크 전송할 수 있드록 변환
      *
      * @return
      */
