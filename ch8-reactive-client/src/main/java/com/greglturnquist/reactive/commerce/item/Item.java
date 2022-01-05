@@ -3,6 +3,9 @@ package com.greglturnquist.reactive.commerce.item;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.geo.Point;
+
+import java.util.Date;
 
 /**
  * 판매상품
